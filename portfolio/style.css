@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -14,12 +15,11 @@ body{
 }
 
 .bar{
-    width: 86%;
     display: flex;
     margin: auto;
     padding: 15px 0;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     position: fixed;
     top: 0;
     left: 0;
@@ -29,12 +29,15 @@ body{
     padding: 10px;
     text-align: center;
     z-index: 100;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .bar a:hover{
     color: blue;
     
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -57,9 +60,13 @@ ul li a{
 
 
 .us{
-    margin-left: 7%;
-    margin-top: 6%;
-
+    padding: 50px;
+    margin-top: 70px;
+    height: 90dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
 }
 .us h1{
     font-size: 60px;
@@ -209,4 +216,37 @@ iframe{
     margin: 0 auto;
     border: 2px solid white;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    width: 90dvw;
+    
+}
+
+.sections{
+    width: 80dvw;
+    margin: 0 auto;
+}
+
+.imageMap img{
+    width: 90dvw;
+}
+
+@media only screen and (max-width: 600px) {
+    .us{
+        width: 100%!important;
+    }
+    .us > h1{
+        /* font-size: .9em!important; */
+    }
+    .resume-container{
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .resume{
+        width: 90dvw;
+        
+    }
+    .sections{
+        padding: 15px;
+    }
 }
